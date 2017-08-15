@@ -1,6 +1,6 @@
 (function() {
 
-    var PNUM = 49
+    var PNUM = 2 
     var paragraph_id = 0;
     var titles;
     var contextss;
@@ -86,7 +86,7 @@
         loading.id = "loading";
         loading.style.display = "none";
         var img = document.createElement("img");
-        img.src = "https://webster.cs.washington.edu/images/babynames/loading.gif";
+        img.src = "loading.gif";
         img.alt = "icon";
         loading.appendChild(img);
         loading.innerHTML = loading.innerHTML + "loading";
@@ -167,6 +167,8 @@
     }
 
     function handleParagraph(data) {
+	console.log('------------------');
+	console.log(data)
         titles = data.titles;
         contextss = data.contextss;
         context_questions = data.context_questions;
@@ -174,7 +176,8 @@
     }
 
     function sendAjax(url, data, handle) {
-        $.getJSON(url, data, function(response) {
+	var trueurl = 'http://127.0.0.1:3377' + url;
+        $.getJSON(trueurl, data, function(response) {
             handle(response.result);
         });
     }
