@@ -5112,23 +5112,20 @@
         </div>
         <hr>
         <h4><span class="label label-default">Select Paragraph</span></h4>
-        <select id="selectArticle"></select>
+        <select id="selectArticle"><option value="0">Write own paragraph</option></select>
 
         <div class="row">
             <div class="col-md-6">
                 <h4><span class="label label-primary">Paragraph</span></h4>
                 <textarea style="resize:none" class="form-control" id="paragraph" rows="10"></textarea>
             </div>
-            <div class="col-md-6" id="qa">
-                <!-- <div id="current"> -->
-                <!--     <h4><span class="label label-primary">Question</span></h4> -->
-                <!--     <input type="text" name="question" class="form-control" id="question"> -->
-                <!--     <button type="button" class="btn btn-sm btn-default" id="submit">submit</button> -->
-                <!--     <button type="button" class="btn btn-sm btn-default" id="clear">clear</button> -->
-                <!--     <div id="loading" style="display: none;"><img src="./drqa_demo/loading.gif" alt="icon">loading</div> -->
-                <!-- </div> -->
-            </div>
+            <div class="col-md-6" id="qa"></div>
         </div>
+	<div class="row" id="translate_p">
+		<div id="paragraph_t"></div>
+		<div id="question_t"></div>
+		<div id="answer_t"></div>
+	</div>
         <hr>
         <div>
             <p>Reference : "Reading Wikipedia to Answer Open-Domain Questions"[<a href="http://arxiv.org/abs/1704.00051v1"
